@@ -4,61 +4,10 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 import random
-import copy
-class Persona():
-    def __init__(self,nombre,apellidos,dni):
-        self.nombre = nombre
-        self.apellidos = apellidos
-        self.dni = dni
-
-    def __str__(self):
-        return "El nombre del doctor es {}, su apellido es{}, dni{} y su especialidad{}".format(self.nombre,self.apellidos,self.dni)
-class Doctores(Persona):
-    def __init__(self,nombre,apellidos,dni,especialidad):
-        Persona.__init__(self,nombre,apellidos,dni)
-        self.especialidad = especialidad
-
-    def _str_(self):
-        return "El nombre del doctor es {}, su apellido es{}, dni{} y su especialidad{}".format(self.nombre,self.apellidos,self.dni,self.especialidad)
-
-    def fichar(self):
-        print("El doctor ha sido fichado")
-
-class Enfermo(Persona):
-    def __init__(self,nombre,apellidos,dni,enfermedades  = {}):
-        Persona.__init__(self,nombre,apellidos,dni)
-        self.enfermedades = enfermedades
-
-    def __str__(self):
-        return "El nombre es {}, el apellido es {}, el dni {} y la enfermedad {}".format(self.nombre,self.apellidos,self.dni,self.enfermedades)
-
-
-
-class Paciente(Persona):
-    def __init__(self,nombre,apellidos,dni,sintomas = {}):
-        Persona.__init__(self,nombre,apellidos,dni)
-        self.sintomas = sintomas
-
-    def __str__(self):
-        return "El nombre del paciente es {}, los apellidos son {}, el dni es {} y los sintomas son {}".format(self.nombre,self.apellidos,self.dni,self.sintomas)
-
-
-class Enfermero(Persona):
-    def __init__(self,nombre, apellidos, dni,planta):
-        Persona.__init__(self,nombre,apellidos,dni)
-        self.planta = planta
-
-    def __str__(self):
-        return "El nombre del enfermero es {}, los apellidos son {}, el dni {}, los sintomas son {}".format(self.nombre,self.apellidos,self.dni,self.planta)
-
-    def fichar(self):
-        print("El enfermero ha sido fichado")
-
-
-class Consulta(Doctores):
-    def __init__(self,nombre,apellidos,dni,especialidad,doctores =[]):
-        Doctores.__init__(self,nombre,apellidos,dni,especialidad)
-        self.doctores = doctores
+from Consulta import *
+from Enfermo import *
+from Enfermeros import *
+from Paciente import *
 
 class Hospital():
     def __init__(self,enfermeros = [], pacientes = [], sala_espera = [], doctor = [],consultas = [], habitacion =[],enfermos = []):
@@ -139,12 +88,14 @@ if __name__ == '__main__':
     persona3 = Persona("Francisco", "Perez", "10302986")
     persona4 = Persona("Felipe", "Fernandez", "5309741")
     doctor1 = Doctores("Christian", "Blanco", "75230149", "Otorrinolaringologo")
+    doctor1.fichar()
     doctor2 = Doctores("Pedro", "Garcia", "4530298", "Oftamologo")
     paciente1 = Paciente(persona1.nombre, persona1.apellidos, persona1.dni, {8: "Covid"})
     paciente2 = Paciente(persona2.nombre, persona2.apellidos, persona2.dni, {4: "Catarro"})
     paciente3 = Paciente(persona3.nombre, persona3.apellidos, persona3.dni, {8: "Lepra"})
     paciente4 = Paciente(persona4.nombre, persona4.apellidos, persona4.dni, {4: "Infeccion de oidos"})
     enfermero = Enfermero(persona2.nombre, persona2.apellidos, persona2.dni, "Quirofano")
+    enfermero.fichar()
     enfermero1 = Enfermero(persona1.nombre, persona1.apellidos, persona1.dni, "Rayos")
     enfermo1 = Enfermo(persona1.nombre, persona1.apellidos, persona1.dni, {random.randint(7, 10), "covid"})
     enfermo2 = Enfermo(persona2.nombre, persona2.apellidos, persona2.dni, {random.randint(7, 10): "Malaria"})
