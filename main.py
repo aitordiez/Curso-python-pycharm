@@ -90,6 +90,7 @@ class Hospital():
         else:
             print("Todas las habitaciones estan ocupadas")
 
+    #Añadir consultas
     def addConsulta(self,doctores):
         self.consultas.append(doctores)
 
