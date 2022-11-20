@@ -95,7 +95,7 @@ class Hospital():
 
     def hay_enfermos(self):
         return len(self.enfermos) > 0
-
+    #Funcion para meter a los enfermos en las habitaciones
     def enfermedades(self):
         try:
             habitacion_libres = self.hay_habitaciones()
@@ -109,6 +109,7 @@ class Hospital():
                 print("Todas las habitaciones estan completas")
         except IndexError:
             print("Lista vacia")
+
 
 
     def hay_consultas(self):
