@@ -155,9 +155,6 @@ if __name__ == '__main__':
     hospital.consultas_doctor_enfermero()
 
 
-    enfermo1 = Enfermo(persona1.nombre, persona1.apellidos, persona1.dni, {random.randint(0, 3): "covid"})
-
-
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
