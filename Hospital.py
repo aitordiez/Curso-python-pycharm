@@ -47,18 +47,14 @@ class Hospital():
         return len(self.enfermos) > 0
     #Funcion para meter a los enfermos en las habitaciones
     def enfermedades(self):
-        try:
-            habitacion_libres = self.hay_habitaciones()
-            while habitacion_libres:
-                for habitaciones in self.habitacion:
-                    enfermos_habitacion = self.enfermos.pop(0)
-                    self.habitacion.append(enfermos_habitacion)
-                    print("El enfermo ",enfermos_habitacion," ha ocupado la ",habitaciones)
-                habitacion_libres = self.hay_habitaciones()
-            else:
+        for habitaciones in range(len(self.habitacion)):
+            enfermos_habitacion = self.enfermos.pop(0)
+            if habitaciones == 3:
                 print("Todas las habitaciones estan completas")
-        except IndexError:
-            print("Lista vacia")
+            else:
+                self.habitacion.append(enfermos_habitacion)
+                print("El enfermo ", enfermos_habitacion, " ha ocupado la habitacion", habitaciones)
+
 
 
 
