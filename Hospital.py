@@ -65,18 +65,17 @@ class Hospital():
         return len(self.doctor) > 0
 
     def consultas_doctor_enfermero(self):
-        hay_paciente = self.hay_sala_espera()
-        while hay_paciente:
-            for pacientess in self.sala_espera:
-                self.enfermeros.append(pacientess)
-                self.sala_espera.pop(0)
-                print("El paciente: ", pacientess, " ha sido atendido por el enfermero ")
-                self.enfermeros.pop(0)
+        for pacientess in self.sala_espera:
+            self.enfermeros.append(pacientess)
+            self.sala_espera.pop(0)
+            print("El paciente: ", pacientess, " ha sido atendido por el enfermero ")
+        for consultass in range(len(self.consultas)):
+            if consultass == 2:
+                print("todas las consultas estan ocupadas por los doctores")
+            else:
                 self.consultas.append(pacientess)
                 print("El doctor esta consultando al paciente: ", pacientess)
-                hay_paciente = self.hay_sala_espera()
-        else:
-            print("todas las consultas estan ocupadas por los doctores")
+                self.consultas.pop(0)
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     persona1 = Persona("Aitor", "Diez", "45201963")
