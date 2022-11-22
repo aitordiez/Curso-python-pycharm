@@ -1,0 +1,21 @@
+11:27:17 AM: INFO [logging_Bar.py:19] ('name:', 'logging_Bar')
+11:27:17 AM: INFO [logging_Bar.py:19] ('El camarero está poniendo el café',)
+11:27:17 AM: DEBUG [logging_Bar.py:15] Taza de café 66 creada a Cafe solo grados
+11:27:17 AM: INFO [logging_Bar.py:19] ('El cliente Cliente1 se está tomado la taza de cafe',)
+11:27:17 AM: INFO [logging_Bar.py:19] ('El cafe se lo toma a gusto',)
+11:27:58 AM: INFO [logging_Bar.py:19] ('name:', 'logging_Bar')
+11:27:58 AM: INFO [logging_Bar.py:19] ('El camarero está poniendo el café',)
+11:27:58 AM: DEBUG [logging_Bar.py:15] Taza de café 21 creada a Cafe solo grados
+11:27:58 AM: INFO [logging_Bar.py:19] ('El cliente Cliente1 se está tomado la taza de cafe',)
+11:27:58 AM: INFO [logging_Bar.py:19] ('El cafe se lo toma a gusto',)
+11:28:16 AM: INFO [logging_Bar.py:19] ('name:', 'logging_Bar')
+11:28:16 AM: INFO [logging_Bar.py:19] ('El camarero está poniendo el café',)
+11:28:16 AM: DEBUG [logging_Bar.py:15] Taza de café 61 creada a Cafe solo grados
+11:28:16 AM: INFO [logging_Bar.py:19] ('El cliente Cliente1 se está tomado la taza de cafe',)
+11:28:16 AM: INFO [logging_Bar.py:19] ('El cafe se lo toma a gusto',)
+11:28:44 AM: INFO [logging_Bar.py:19] ('name:', 'logging_Bar')
+11:28:44 AM: INFO [logging_Bar.py:19] ('El camarero está poniendo el café',)
+11:28:44 AM: DEBUG [logging_Bar.py:15] Taza de café 56 creada a Cafe solo grados
+11:28:44 AM: INFO [logging_Bar.py:19] ('El cliente Cliente1 se está tomado la taza de cafe',)
+11:28:44 AM: ERROR [logging_Bar.py:27] ('El cafe esta demasiado caliente',)
+11:28:44 AM: ERROR [logging_Bar.py:27] ('El camarero le pone un vaso de agua',)
